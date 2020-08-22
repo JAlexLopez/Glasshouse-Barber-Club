@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Glasshouse Barber Club</title>
+    <link href="./styles.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVut31qmZvCu2zabCMrquZRyhNDN33s2U&callback=initMap" type="text/javascript"></script>
+    <script src="./app.js" async></script>
+    <script src="./map.js" async></script>
+    <style>
+        .mySlides {
+            display: none;
+            object-fit: cover;
+            width: 100%;
+            height: min-content;
+            overflow: hidden;
+            border-bottom: 3px solid white;
+        }
+    </style>
+</head>
+<header>
+    <img id="banner-logo" src="./images/glasshouse-logo.png" />
+</header>
+
+<body>
+    <div class="announcement">
+        <p>WE'RE OPEN! Please schedule an appointment below or call (678) 999-8212</p>
+    </div>
+    <div id="image-carousel">
+        <img class="mySlides" src="./images/slideImage-1.jpg" />
+        <img class="mySlides" src="./images/slideImage-2.jpg" />
+        <img class="mySlides" src="./images/slideImage-3.jpg" />
+    </div>
+    <div class="price-section">
+        <h1>Pricing</h1>
+        <div class="list">
+            <div class="type">
+                <p>Men's cut</p>
+                <p>Children's cut</p>
+                <p>Senior cut</p>
+                <p>Beard trim</p>
+            </div>
+            <div class="prices">
+                <p>$25</p>
+                <p>$12</p>
+                <p>$10</p>
+                <p>$20</p>
+            </div>
+        </div>
+    </div>
+    <div class="appointment-section">
+        <h1>Appointments</h1>
+        <form class="appointment">
+            <div class="row">
+                <div class="col-25">
+                    <label for="fname">First Name</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="lname">Last Name</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="time">Time</label>
+                </div>
+                <div class="col-75">
+                    <input type="time" id="time" name="apt-time">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="service">Service</label>
+                </div>
+                <div class="col-75">
+                    <select>
+                        <option value="mens-cut">Men's cut</option>
+                        <option value="childrens-cut">Children's cut</option>
+                        <option value="senior-cut">Senior's cut</option>
+                        <option value="mens-cut">Beard Trim</option>
+                    </select>
+                </div>
+            </div>
+
+        </form>
+        <button onclick="aptSubmit()" class="submit ">Submit</button>
+    </div>
+    <div id="map"></div>
+</body>
+
+</html>
