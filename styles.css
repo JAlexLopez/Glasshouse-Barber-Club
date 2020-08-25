@@ -107,7 +107,7 @@ header {
     text-decoration: none;
 }
 
-#map {
+#mapdiv {
     height: 400px;
 }
 
@@ -185,7 +185,7 @@ header {
         cursor: pointer;
         text-decoration: none;
     }
-    #map {
+    #mapdiv {
         height: 250px;
     }
 }

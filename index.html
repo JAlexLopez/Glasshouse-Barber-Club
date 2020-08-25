@@ -9,10 +9,19 @@
     <title>Glasshouse Barber Club</title>
     <link href="./styles.css" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default" async></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7Cjz5IKmKXQohkfKVZEiRD4f2IP-PqoE&callback=initMap&libraries=&v=weekly" defer async></script>
     <script src="./app.js" async></script>
     <script src="./map.js" async></script>
+
+
+    <script type="text/javascript" src='../test-credentials.js'></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-core.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-service.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"></script>
+    <script type="text/javascript">
+        window.ENV_VARIABLE = 'https://developer.here.com'
+    </script>
+    <script src='https://developer.here.com/javascript/src/iframeheight.js'></script>
     <style>
         .mySlides {
             display: none;
@@ -98,7 +107,7 @@
         </form>
         <button onclick="aptSubmit()" class="submit ">Submit</button>
     </div>
-    <div id="map"></div>
+    <div id="mapdiv"></div>
 </body>
 
 </html>
